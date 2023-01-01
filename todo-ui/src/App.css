@@ -1,0 +1,48 @@
+:root{
+  --text-color:black;
+  --bg-color:white;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.app {
+  font-family: sans-serif;
+}
+
+button {
+  font-size: 1.25em;
+  font-weight: bold;
+  border: none;
+  color: black;
+  width: fit-content;
+  background-color: transparent;
+}
+
+body,
+input,
+textarea {
+  background-color: var(--bg-color);
+  transition: all 100ms ease-in;
+}
+
+h1,
+p,
+a,
+label,
+input,
+textarea {
+  color: var(--text-color);
+  transition: all 100ms ease-in;
+}
+/* The below can be used for dark mode */
+/* .dark-scheme {
+  color: white;
+  background-color: hsl(202, 100%, 10%);
+} */

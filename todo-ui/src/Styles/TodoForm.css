@@ -1,0 +1,55 @@
+* {
+  -webkit-appearance: none;
+}
+
+.todo-form {
+  padding: 2rem;
+}
+
+.todo-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-input-container {
+  display: grid;
+}
+
+.todo-input-container label {
+  font-weight: bold;
+  margin: 1rem 0rem;
+}
+.todo-input-container input,
+.todo-input-container textarea {
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  border: 0.15rem solid hsl(178 75% 50%);
+  border-radius: 0.75rem;
+  outline: none;
+  transition: box-shadow 100ms ease-in;
+}
+.todo-input-container input:hover,
+.todo-input-container input:focus,
+.todo-input-container textarea:hover,
+.todo-input-container textarea:focus {
+  box-shadow: 0 0.5rem 1rem hsl(178 75% 50% / 0.3);
+}
+
+.todo-form .btn {
+  align-self: center;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: hsl(178 75% 50%);
+  transition: box-shadow 100ms ease;
+}
+
+.todo-form .btn:hover {
+  box-shadow: 0 0.5rem 1rem hsl(178 75% 50% / 0.7);
+}
+
+.todo-input-container #task-desc {
+  min-height: 7.5rem;
+  max-height: 50vh;
+}

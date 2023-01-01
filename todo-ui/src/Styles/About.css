@@ -1,0 +1,29 @@
+.about-container{
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+.about-head, .about-body{
+    margin-bottom: 1rem;
+}
+
+.about-head{
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-style: wavy;
+    text-decoration-color: hsl(180,75%,50%);
+    line-height: 2;
+}
+
+.about-body{
+    line-height: 1.5;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .about-container{
+      grid-template-columns: 1fr 1fr;
+  }
+}
