@@ -1,34 +1,27 @@
 import React from 'react';
 import '../Styles/Todo.css';
 import DeleteIcon from '../Icons/DeleteIcon.js';
-import CheckIcon from '../Icons/CheckIcon.js';
-import XmarkIcon from '../Icons/XmarkIcon.js';
 
 export default function TodoItem(props) {
-  const { taskItem, deleteItem, toggleCheck } = props;
-  function handleClick(itemID) {
-    toggleCheck(itemID);
-  }
+  const { todo, deleteItem, toggleCheck } = props;
 
   return (
     <div className="todo-container">
-      <h1 className={taskItem.isComplete ? 'todo-item stroke' : 'todo-item'}>
-        {taskItem.taskId}.{taskItem.task}
-      </h1>
-      <p className={taskItem.isComplete ? 'todo-desc stroke' : 'todo-desc'}>
-        {taskItem.desc}
+        <input
+          type="checkbox"
+          name="todo-checkbox"
+          className="todo-ckeckbox"
+          checked={todo.isComplete}
+          onClick={(e) => {
+            e.preventDefault();
+            toggleCheck(todo.id);
+          }}
+        />
+      <p className={todo.isComplete ? 'todo-item stroke' : 'todo-item'}>
+        {todo.id}.{todo.task}
       </p>
-      <button
-        className="btn delete-btn"
-        onClick={() => deleteItem(taskItem.taskId)}
-      >
+      <button className="btn delete-btn" onClick={() => deleteItem(todo.id)}>
         {DeleteIcon}
-      </button>
-      <button
-        className="btn check-btn"
-        onClick={() => handleClick(taskItem.taskId)}
-      >
-        {taskItem.isComplete ? XmarkIcon : CheckIcon}
       </button>
     </div>
   );

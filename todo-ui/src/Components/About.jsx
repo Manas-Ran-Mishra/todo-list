@@ -7,7 +7,7 @@ export default function About() {
     getMsg();
   });
   const getMsg = async () => {
-    const res = await fetch('http://192.168.29.47:8000/');
+    const res = await fetch('http://localhost:8000/');
     const resJson = await res.json();
     setAbout(resJson);
     // console.log(resJson)

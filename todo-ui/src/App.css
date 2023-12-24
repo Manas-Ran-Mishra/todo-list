@@ -1,6 +1,5 @@
 :root{
-  --text-color:black;
-  --bg-color:white;
+  --accent-color: #f5f5db;
 }
 
 * {
@@ -33,6 +32,7 @@ textarea {
 }
 
 h1,
+h2,
 p,
 a,
 label,
@@ -41,8 +41,39 @@ textarea {
   color: var(--text-color);
   transition: all 100ms ease-in;
 }
+
+.todo-tasks{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-inline: 2.5rem;
+  margin-block: 1rem;
+}
+
+@media only screen and (min-width: 850px) {
+  .todo-tasks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* The below can be used for dark mode */
 /* .dark-scheme {
   color: white;
   background-color: hsl(202, 100%, 10%);
+} */
+
+/* Below CSS is for prefered theme(light or dark) */
+/* @media (prefers-color-scheme: light) {
+  body {
+    --text-color: black;
+    --bg-color: white;
+    --textarea-bg-color: hsl(180 5% 90%);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --text-color: white;
+    --bg-color: hsl(178,5%,15%);
+    --textarea-bg-color: hsl(180 5% 10%);
+  }
 } */
