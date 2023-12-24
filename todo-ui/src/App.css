@@ -1,4 +1,7 @@
 :root{
+  --bg-color: white;
+  --text-color: black;
+  --textarea-bg-color: hsl(180 5% 90%);
   --accent-color: #f5f5db;
 }
 

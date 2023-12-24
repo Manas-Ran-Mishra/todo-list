@@ -48,8 +48,8 @@ export default function TodoForm(props) {
             onChange={handleTaskInputChange}
             value={task}
             placeholder="Add todo here..."
-            minlength="1"
-            maxlength="60"
+            minLength="1"
+            maxLength="60"
             required
           />
           <div className="todo-task-buttons-set">

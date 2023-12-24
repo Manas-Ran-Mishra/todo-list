@@ -3,7 +3,7 @@ import Todo from '../Components/Todo.jsx';
 import TodoForm from '../Components/TodoForm';
 import CompletedTask from '../Components/CompletedTask.jsx';
 
-let id = 0;
+let id = 1;
 
 export default function Home() {
   const [todos, setTodos] = useState([]);
